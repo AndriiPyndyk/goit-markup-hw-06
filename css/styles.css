@@ -534,6 +534,8 @@ img {
     background-color: var(--green);
 }
 
+
+
 /* ---Footer Modal Window--- */
 
 .footer-modal-window {
@@ -542,6 +544,10 @@ img {
 
 .footer-modal-wrapper {
     display: flex;
+}
+
+.footer-modal-label {
+    margin-right: 24px;
 }
 
 .footer-modal-window-title {
@@ -565,7 +571,7 @@ img {
 
     font-weight: 400;
     font-size: 12px;
-    line-height: 2.00;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--white);
 }
@@ -576,9 +582,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-
-    margin-left: 24px;
 
     min-width: 165px;
     height: 40px;
@@ -597,12 +600,15 @@ img {
 
 .footer-modal-icon {
     fill: var(--white);
+    margin-left: 16px;
 }
 
 .footer-modal-send-btn:hover,
 .footer-modal-send-btn:focus {
     background-color: var(--ocean);
 }
+
+
 
 
 
@@ -738,6 +744,10 @@ img {
     transform: translateY(0%);
 }
 
+
+
+
+
 /* ======MODAL WINDOW======= */
 
 /* ---Modal window--- */
@@ -762,9 +772,7 @@ img {
     transform: translate(-50%, -50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    padding-top: 72px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 72px 24px 24px 24px;
     width: 408px;
     min-height: 576px;
 
@@ -780,6 +788,9 @@ img {
     visibility: hidden;
     pointer-events: none;
 }
+
+
+
 
 /* ---Close modal button--- */
 
@@ -816,6 +827,10 @@ img {
     border: none;
 }
 
+
+
+
+
 /* ---Contact form--- */
 
 .contact-form-title {
@@ -829,12 +844,12 @@ img {
     color: var(--navy-blue);
 }
 
-.contact-form-field-title {
+.contact-form-field {
     display: block;
     margin-bottom: 4px;
 
-    font-weight: 400;
     font-size: 12px;
+    font-weight: 400;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--light-slate);
@@ -845,8 +860,13 @@ img {
     margin-bottom: 8px;
 }
 
+.contact-form-field-comment-wrapper {
+    display: block;
+    margin-bottom: 16px;
+}
+
 .contact-form-input {
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     width: 100%;
     height: 40px;
@@ -854,6 +874,8 @@ img {
 
     border: 1px solid var(--navy-blue-modal);
     border-radius: 4px;
+    background-color: transparent;
+    outline: transparent;
 
     font-weight: 500;
     font-size: 16px;
@@ -864,8 +886,7 @@ img {
 
 .contact-form-input:focus,
 .contact-form-comment:focus {
-    outline: none;
-    border: 1px solid var(--iris);
+    border-color: var(--iris);
 }
 
 .contact-form-input:focus + .contact-form-icon {
@@ -873,7 +894,7 @@ img {
 }   
 
 .contact-form-comment {
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     width: 100%;
     height: 120px;
@@ -881,6 +902,8 @@ img {
 
     border: 1px solid var(--navy-blue-modal);
     border-radius: 4px;
+    background-color: transparent;
+    outline: transparent;
     resize: none;
 
     font-weight: 400;
@@ -939,43 +962,8 @@ img {
 
 
 
-
-
-
 .contact-form-checkbox-wrapper {
     margin-bottom: 24px;
-}
-
-.contact-form-checkbox-input {
-    appearance: none;
-    position: absolute;
-}
-
-.contact-form-custom-icon {
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 2px;
-}
-
-.contact-form-mark-icon {
-    fill: var(--white);
-    opacity: 0;
-}
-
-.contact-form-checkbox-input:checked + .contact-form-checkbox-label .contact-form-custom-icon {
-    background-color: var(--ocean);
-    border: none;
-}
-
-.contact-form-checkbox-input:checked + .contact-form-checkbox-label .contact-form-mark-icon {
-    opacity: 1;
-}
-
-.contact-form-checkbox-label {
-    display: inline-flex;
-    align-items: center;
-}
-.contact-form-checkbox-text {
-    margin-left: 8px;
 }
 
 .contact-form-checkbox-label {
@@ -986,6 +974,20 @@ img {
     color: var(--light-slate);
 }
 
+.contact-form-checkbox-field {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid var(--navy-blue-modal);
+    border-radius: 2px;
+    fill: transparent;
+}
+
 .contact-form-checkbox-policy-link {
     font-weight: 400;
     font-size: 12px;
@@ -994,6 +996,17 @@ img {
     text-decoration-line: underline;
     color: var(--iris);
 }
+
+.contact-form-checkbox-input:checked + .contact-form-checkbox-label .contact-form-checkbox-field {
+    background-color: var(--ocean);
+    border: none;
+    fill: var(--white);
+    border-color: var(--ocean);
+}
+
+
+
+
 
 
 
